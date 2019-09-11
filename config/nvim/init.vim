@@ -4,6 +4,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Make sure you use single quotes
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -30,6 +32,12 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+" UI Plugins
+Plug 'itchyny/lightline.vim'
+
+" Language Servers
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " Colors {{{
@@ -46,3 +54,12 @@ set expandtab
 set autoindent
 set copyindent
 " }}}
+
+" Autocommands{{{
+autocmd vimenter * NERDTree
+" }}}
+
+" Remapping{{{
+map <C-o> :NERDTreeToggle<CR>
+" }}}
+
