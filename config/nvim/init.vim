@@ -56,10 +56,12 @@ set copyindent
 " }}}
 
 " Autocommands{{{
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " }}}
 
 " Remapping{{{
 map <C-o> :NERDTreeToggle<CR>
+let mapleader = ','
+map <leader>r :!ruby %<cr>
 " }}}
 
