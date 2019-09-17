@@ -10,6 +10,7 @@ alias mnt='bash ~/scripts/mount_server' alias vim='nvim'
 alias v='nvim'
 alias c='clear'
 alias ls='colorls'
+alias mydots='cd ~/.dotfiles'
 
 ### Plugins
 ##  
