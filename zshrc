@@ -9,6 +9,7 @@ alias sshbox='bash ~/scripts/remote_servers'
 alias mnt='bash ~/scripts/mount_server' alias vim='nvim'
 alias v='nvim'
 alias c='clear'
+alias ls='colorls'
 
 ### Plugins
 ##  
@@ -17,6 +18,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 zgen load zsh-users/zsh-syntax-highlighting
 zgen load romkatv/powerlevel10k powerlevel10k
+
+# colorls gem
+source $(dirname $(gem which colorls))/tab_complete.sh
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
