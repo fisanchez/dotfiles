@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Make sure you use single quotes
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdcommenter'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
