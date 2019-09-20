@@ -62,6 +62,7 @@ set copyindent
 " }}}
 
 " Remapping{{{
+set number
 map <C-o> :NERDTreeToggle<CR>
 let mapleader = ','
 map <leader>r :!ruby %<cr>
