@@ -24,6 +24,8 @@ zgen load romkatv/powerlevel10k powerlevel10k
 # colorls gem
 source $(dirname $(gem which colorls))/tab_complete.sh
 
+# RVM 
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
