@@ -9,7 +9,8 @@ alias sshbox='bash ~/scripts/remote_servers'
 alias mnt='bash ~/scripts/mount_server' alias vim='nvim'
 alias v='nvim'
 alias c='clear'
-alias ls='colorls'
+alias l='colorls'
+alias ll='colorls -la'
 alias mydots='cd ~/.dotfiles'
 
 ### Plugins
