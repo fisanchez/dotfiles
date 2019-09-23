@@ -4,6 +4,9 @@ filetype plugin on
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/nvim/plugged')
+" Theme
+Plug 'flrnprz/candid.vim'
+Plug 'rishikanthc/skyfall-vim'
 
 " Make sure you use single quotes
 Plug '/usr/local/opt/fzf'
@@ -41,6 +44,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 
 call plug#end()
+" Theme settings{{{
+set t_Co=16
+syntax enable
+colorscheme skyfall
+
+" }}}
 
 " Colors {{{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
