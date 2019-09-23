@@ -11,7 +11,7 @@ alias v='nvim'
 alias c='clear'
 alias l='colorls'
 alias ll='colorls -la'
-alias mydots='cd ~/.dotfiles'
+alias md='cd ~/.dotfiles'
 
 ### Plugins
 ##  
