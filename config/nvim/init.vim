@@ -40,6 +40,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " UI Plugins
 Plug 'itchyny/lightline.vim'
 
+"Docker
+Plug 'ekalinin/dockerfile.vim'
+
 " Language Servers
 Plug 'dense-analysis/ale'
 
