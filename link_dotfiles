@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Only install if cant install thoughtbot's dotfile management
+
+# Link zsh config
+ln -s $HOME/.dotfiles/zshrc $HOME/.zshrc
+
+# Link nvim configs
+ln -s $HOME/.dotfiles/config/nvim/init.vim $HOME/.config/nvim/init.vim
+
+# Link p10k configs
+ln -s $HOME/.dotfiles/p10k.zsh $HOME/.p10k.zsh
+
