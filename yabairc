@@ -4,8 +4,8 @@
 yabai -m config status_bar                   on
 yabai -m config status_bar_text_font         "Helvetica Neue:Bold:12.0"
 yabai -m config status_bar_icon_font         "Font Awesome 5 Free:Solid:12"
-yabai -m config status_bar_background_color  0xff202020
-yabai -m config status_bar_foreground_color  0xffa8a8a8
+yabai -m config status_bar_background_color  0xfffff47d
+yabai -m config status_bar_foreground_color  0xff000000
 yabai -m config status_bar_space_icon_strip  I II III IV V VI VII VIII IX X
 yabai -m config status_bar_power_icon_strip   
 yabai -m config status_bar_space_icon        
@@ -34,11 +34,11 @@ yabai -m config mouse_action2                resize
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  1
-yabai -m config bottom_padding               1
-yabai -m config left_padding                 1
-yabai -m config right_padding                1
-yabai -m config window_gap                   1
+yabai -m config top_padding                  0
+yabai -m config bottom_padding               0
+yabai -m config left_padding                 0
+yabai -m config right_padding                0
+yabai -m config window_gap                   0
 
 echo "yabai configuration loaded.."
 
