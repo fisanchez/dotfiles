@@ -12,6 +12,7 @@ alias c='clear'
 alias l='colorls'
 alias ll='colorls -la'
 alias md='cd ~/.dotfiles'
+alias g='git'
 
 ### Plugins
 ##  
