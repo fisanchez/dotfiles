@@ -13,6 +13,14 @@ alias l='colorls'
 alias ll='colorls -la'
 alias md='cd ~/.dotfiles'
 alias g='git'
+alias ..='cd ..'
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 ### Plugins
 ##  
@@ -26,7 +34,7 @@ zgen load romkatv/powerlevel10k powerlevel10k
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 # RVM 
-export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
