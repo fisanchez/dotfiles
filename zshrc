@@ -1,4 +1,4 @@
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
 export EDITOR='nvim'
 
 # load zgen
@@ -22,11 +22,19 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-### Plugins
-##  
-# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
 
+### Plugins
 zgen load zsh-users/zsh-syntax-highlighting
 zgen load romkatv/powerlevel10k powerlevel10k
 
