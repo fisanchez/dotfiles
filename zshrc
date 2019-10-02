@@ -9,8 +9,8 @@ alias sshbox='bash ~/scripts/remote_servers'
 alias mnt='bash ~/scripts/mount_server' alias vim='nvim'
 alias v='nvim'
 alias c='clear'
-alias l='colorls'
-alias ll='colorls -la'
+alias l='ls'
+alias ll='ls -la'
 alias md='cd ~/.dotfiles'
 alias g='git'
 alias ..='cd ..'
@@ -37,9 +37,6 @@ bindkey -s '^o' 'lfcd\n'
 ### Plugins
 zgen load zsh-users/zsh-syntax-highlighting
 zgen load romkatv/powerlevel10k powerlevel10k
-
-# colorls gem
-source $(dirname $(gem which colorls))/tab_complete.sh
 
 # RVM 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
