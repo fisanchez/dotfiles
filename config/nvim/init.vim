@@ -1,4 +1,5 @@
 filetype plugin on 
+set nocompatible
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -38,7 +39,6 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " UI Plugins
-Plug 'itchyny/lightline.vim'
 
 "Docker
 Plug 'ekalinin/dockerfile.vim'
@@ -46,20 +46,17 @@ Plug 'ekalinin/dockerfile.vim'
 " Language Servers
 Plug 'dense-analysis/ale'
 
+" Note taking
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 " Theme settings{{{
-set t_Co=16
-syntax enable
-colorscheme skyfall
-
-" }}}
-
-" Colors {{{
-set termguicolors
-
-syntax enable
+" set t_Co=16
 set background=dark
-" }}} Colors
+syntax enable
+colorscheme candid
+set termguicolors
+" }}}
 
 " Spaces and Tabs {{{
 set tabstop=2
