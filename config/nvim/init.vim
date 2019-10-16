@@ -1,6 +1,5 @@
 filetype plugin on 
 set nocompatible
-
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
@@ -19,6 +18,12 @@ Plug 'junegunn/vim-easy-align'
 
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+" Accounting
+Plug 'https://github.com/ledger/vim-ledger.git'
+
+autocmd BufNewFile,BufRead *.dat set filetype=ledger
+
 
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -68,7 +73,8 @@ set copyindent
 " }}}
 
 " Autocommands{{{
-" autocmd vimenter * NERDTree
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufNewFile, BufRead *.dat set filetype=ledger
 " }}}
 
 " Remapping{{{
@@ -78,3 +84,9 @@ let mapleader = ','
 map <leader>r :!ruby %<cr>
 " }}}
 
+" Global configs{{{
+let g:vimwiki_list = [{'path': '~/github/notes',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:ledger_maxwidth = 80
+let g:ledger_fillstring = '    -'
+" }}}
