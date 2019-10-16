@@ -12,8 +12,10 @@ alias c='clear'
 alias l='ls'
 alias ll='ls -la'
 alias md='cd ~/.dotfiles'
+alias gh='cd ~/github'
 alias g='git'
 alias ..='cd ..'
+alias tx='tmuxinator'
 
 # Basic auto/tab complete:
 autoload -U compinit
