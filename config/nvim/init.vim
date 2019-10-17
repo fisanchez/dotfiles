@@ -19,10 +19,11 @@ Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" Accounting
+" Accounting{{{
 Plug 'https://github.com/ledger/vim-ledger.git'
 
 autocmd BufNewFile,BufRead *.dat set filetype=ledger
+" }}}
 
 
 " Multiple Plug commands can be written in a single line using | separators
@@ -44,6 +45,9 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " UI Plugins
+
+" Ruby
+Plug 'https://github.com/thoughtbot/vim-rspec.git'
 
 "Docker
 Plug 'ekalinin/dockerfile.vim'
