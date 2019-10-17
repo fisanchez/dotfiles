@@ -19,12 +19,8 @@ Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" Accounting{{{
+" Accounting
 Plug 'https://github.com/ledger/vim-ledger.git'
-
-autocmd BufNewFile,BufRead *.dat set filetype=ledger
-" }}}
-
 
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -46,8 +42,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " UI Plugins
 
-" Ruby
+" Ruby{{{
 Plug 'https://github.com/thoughtbot/vim-rspec.git'
+
+" }}}
 
 "Docker
 Plug 'ekalinin/dockerfile.vim'
@@ -59,6 +57,20 @@ Plug 'dense-analysis/ale'
 Plug 'vimwiki/vimwiki'
 
 call plug#end()
+
+" Ruby configs{{{
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+" }}}
+
+"Accounting{{{
+autocmd BufNewFile,BufRead *.dat set filetype=ledger
+"}}}
+
 " Theme settings{{{
 " set t_Co=16
 set background=dark
