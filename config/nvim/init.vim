@@ -1,3 +1,4 @@
+set encoding=UTF-8
 filetype plugin on 
 set nocompatible
 " Specify a directory for plugins
@@ -8,10 +9,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'flrnprz/candid.vim'
 Plug 'rishikanthc/skyfall-vim'
 
-" Make sure you use single quotes
+" Fuzzy Find
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
+
+" Autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -42,6 +46,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " UI Plugins
 
+" Vim Icons
+Plug 'ryanoasis/vim-devicons'
+
 " Ruby{{{
 Plug 'https://github.com/thoughtbot/vim-rspec.git'
 
@@ -55,6 +62,8 @@ Plug 'dense-analysis/ale'
 
 " Note taking
 Plug 'vimwiki/vimwiki'
+Plug 'https://github.com/vim-pandoc/vim-pandoc.git'
+Plug 'https://github.com/vim-pandoc/vim-pandoc-syntax.git'
 
 call plug#end()
 
@@ -72,11 +81,11 @@ autocmd BufNewFile,BufRead *.dat set filetype=ledger
 "}}}
 
 " Theme settings{{{
-" set t_Co=16
+set t_Co=16
 set background=dark
 syntax enable
-colorscheme candid
-set termguicolors
+colorscheme skyfall
+" set termguicolors
 " }}}
 
 " Spaces and Tabs {{{
