@@ -11,6 +11,7 @@ Plug 'rishikanthc/skyfall-vim'
 
 " Fuzzy Find
 Plug '/usr/local/opt/fzf'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
 
@@ -88,6 +89,10 @@ colorscheme skyfall
 " set termguicolors
 " }}}
 
+" UI Changes{{{
+" Great references https://alvinalexander.com/
+" }}}
+
 " Spaces and Tabs {{{
 set tabstop=2
 set softtabstop=2
@@ -108,6 +113,10 @@ map <C-o> :NERDTreeToggle<CR>
 let mapleader = ','
 map <leader>r :!ruby %<cr>
 " }}}
+
+"ALE Settings{{{
+highlight ALEWarning ctermbg=none cterm=underline
+"}}}
 
 " Global configs{{{
 let g:vimwiki_list = [{'path': '~/github/notes',
