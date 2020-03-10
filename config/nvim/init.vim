@@ -4,8 +4,19 @@ set nocompatible
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+"
+
+
 call plug#begin('~/.local/share/nvim/plugged')
 " Theme
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 Plug 'flrnprz/candid.vim'
 Plug 'rishikanthc/skyfall-vim'
 
@@ -60,6 +71,9 @@ Plug 'ekalinin/dockerfile.vim'
 
 " Language Servers
 Plug 'dense-analysis/ale'
+
+" HTML
+" Plug "https://github.com/mattn/emmet-vim.git"
 
 " Note taking
 Plug 'vimwiki/vimwiki'
@@ -123,4 +137,6 @@ let g:vimwiki_list = [{'path': '~/github/notes',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:ledger_maxwidth = 80
 let g:ledger_fillstring = '    -'
+
+let g:deoplete#enable_at_startup = 1 
 " }}}
