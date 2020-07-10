@@ -49,7 +49,7 @@ schemes:
 
   agronaut: &agronaut
     primary:
-      background: '#292C3E'
+      background: '#000000'
       foreground: '#EBEBEB'
 
     # Cursor colors
