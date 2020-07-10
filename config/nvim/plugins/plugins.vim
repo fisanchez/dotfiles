@@ -9,6 +9,9 @@ if has('nvim')
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+"General Programming Plugin
+Plug 'https://github.com/tpope/vim-commentary.git'
+
 " Conquer of Completition  {{{ 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "}}}
