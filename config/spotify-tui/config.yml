@@ -1,5 +1,3 @@
-# Sample config file
-
 # The theme colours can be an rgb string of the form "255, 255, 255" or a string that references the colours from your terminal theme: Reset, Black, Red, Green, Yellow, Blue, Magenta, Cyan, Gray, DarkGray, LightRed, LightGreen, LightYellow, LightBlue, LightMagenta, LightCyan, White.
 theme:
   active: Cyan # current playing song in list
@@ -10,9 +8,9 @@ theme:
   hovered: Magenta # hovered pane border
   inactive: Gray # borders of inactive panes
   playbar_background: Black # background of progress bar
-  playbar_progress: LightCyan # filled-in part of the progress bar
+  playbar_progress: Green # filled-in part of the progress bar
   playbar_text: White # artist name in player pane
-  selected: LightCyan # a) selected pane border, b) hovered item in list, & c) track title in player
+  selected: Green # a) selected pane border, b) hovered item in list, & c) track title in player
   text: "255, 255, 255" # text in panes
 
 behavior:
@@ -34,6 +32,8 @@ keybindings:
   # Shift modifiers use a capital letter (also applies with other modifier keys
   # like ctrl-A)
   jump_to_artist_album: "A"
+  playlist: "P"
+  recommendations: "R"
 
   manage_devices: "d"
   decrease_volume: "-"
@@ -41,12 +41,13 @@ keybindings:
   toggle_playback: " "
   seek_backwards: "<"
   seek_forwards: ">"
+  shuffle: "s"
   next_track: "n"
   previous_track: "p"
   copy_song_url: "c"
   copy_album_url: "C"
   help: "?"
-  shuffle: "s"
   repeat: "r"
   search: "/"
   audio_analysis: "v"
+  
