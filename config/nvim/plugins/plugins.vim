@@ -9,6 +9,10 @@ if has('nvim')
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+"Window management
+Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
+
 "General Programming Plugin
 Plug 'https://github.com/tpope/vim-commentary.git'
 
@@ -82,6 +86,7 @@ Plug 'dense-analysis/ale'
 Plug 'vimwiki/vimwiki'
 Plug 'https://github.com/vim-pandoc/vim-pandoc.git'
 Plug 'https://github.com/vim-pandoc/vim-pandoc-syntax.git'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " VueJS Plugins{{{
 Plug 'https://github.com/posva/vim-vue.git'
