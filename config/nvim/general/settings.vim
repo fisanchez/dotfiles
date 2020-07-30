@@ -61,3 +61,13 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 
 " You can't stop me
 cmap w!! w !sudo tee %
+
+" Sometimes syntax highlighting can get out of sync in large JSX and TSX files. 
+" This was happening too often for me so I opted to enable syntax sync fromstart, 
+" which forces vim to rescan the entire buffer when highlighting. 
+" This does so at a performance cost, especially for large files. 
+" Enable this when I enter a JavaScript or TypeScript buffer, and disable it when I leave:
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+
