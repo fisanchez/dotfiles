@@ -10,8 +10,6 @@ if has('nvim')
 endif
 
 "Window management
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
 
 "General Programming Plugin
 Plug 'https://github.com/tpope/vim-commentary.git'
@@ -29,9 +27,6 @@ Plug '/usr/local/opt/fzf'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
-
-" Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -88,9 +83,17 @@ Plug 'https://github.com/vim-pandoc/vim-pandoc.git'
 Plug 'https://github.com/vim-pandoc/vim-pandoc-syntax.git'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
+" JS Plugins
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'pangloss/vim-javascript'
+
+
 " VueJS Plugins{{{
 Plug 'https://github.com/posva/vim-vue.git'
 Plug 'https://github.com/ap/vim-css-color.git'
 " }}}
+"
+Plug 'kevinoid/vim-jsonc'
+
 call plug#end()
 
