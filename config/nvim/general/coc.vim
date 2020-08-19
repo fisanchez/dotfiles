@@ -156,7 +156,9 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-vetur',
   \ 'coc-tsserver',
-  \ 'coc-solargraph'
+  \ 'coc-solargraph',
+  \ 'coc-eslint',
+  \ 'coc-highlight',
   \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')

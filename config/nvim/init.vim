@@ -24,11 +24,12 @@ autocmd BufNewFile, BufRead *.dat set filetype=ledger
 " }}}
 
 "ALE Settings{{{
-highlight ALEWarning ctermbg=none cterm=underline
+"highlight ALEWarning ctermbg=none cterm=underline
 "}}}
 
 source $HOME/.dotfiles/config/nvim/plugins/plugins.vim
 source $HOME/.dotfiles/config/nvim/general/settings.vim
 source $HOME/.dotfiles/config/nvim/general/coc.vim
+source $HOME/.dotfiles/config/nvim/general/anyfold.vim
 source $HOME/.dotfiles/config/nvim/general/markdown.vim
 source $HOME/.dotfiles/config/nvim/keys/mapping.vim

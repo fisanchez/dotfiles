@@ -18,6 +18,7 @@ Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "}}}
 
+Plug 'jparise/vim-graphql'
 
 Plug 'flrnprz/candid.vim'
 Plug 'rishikanthc/skyfall-vim'
@@ -61,7 +62,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " UI Plugins
 
 " Vim Icons
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 " Ruby{{{
 Plug 'https://github.com/thoughtbot/vim-rspec.git'
@@ -72,7 +73,13 @@ Plug 'https://github.com/thoughtbot/vim-rspec.git'
 Plug 'ekalinin/dockerfile.vim'
 
 " Language Servers
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
+
+" GIT
+Plug 'git@github.com:tpope/vim-fugitive.git'
+
+" Vim Anyfold
+Plug 'git@github.com:pseewald/vim-anyfold.git'
 
 " HTML
 " Plug "https://github.com/mattn/emmet-vim.git"

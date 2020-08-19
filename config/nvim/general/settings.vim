@@ -8,7 +8,13 @@ let g:ledger_maxwidth = 80
 let g:ledger_fillstring = '    -'
 let NERDTreeShowHidden=1
 
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+let g:NERDTreeDirArrowExpandable = "\u00a0"
+let g:NERDTreeDirArrowCollapsible = "\u00a0"
+
 syntax enable                           " Enables syntax highlighing
+set ignorecase                          " Ignores case when searching
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -47,7 +53,7 @@ set splitright
 set t_Co=256                             " Support 256 colors
 set background=dark                     " tell vim what the background color looks like
 syntax enable
-" colorscheme skyfall
+colorscheme skyfall
 " [buffer number] followed by filename:
 set statusline=[%n]\ %t
 " for Syntastic messages:
@@ -69,5 +75,4 @@ cmap w!! w !sudo tee %
 " Enable this when I enter a JavaScript or TypeScript buffer, and disable it when I leave:
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-
 
