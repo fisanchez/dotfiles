@@ -6,9 +6,9 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
+nnoremap <TAB> :bprevious<CR>
 " SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
+nnoremap <S-TAB> :bnext<CR>
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>
@@ -31,3 +31,10 @@ nnoremap <leader>gb :Gblame <CR>
 
 " Toggles
 nnoremap <leader>LN :setlocal number!<cr>
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+

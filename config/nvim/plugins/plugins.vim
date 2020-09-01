@@ -66,14 +66,17 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Ruby{{{
 Plug 'https://github.com/thoughtbot/vim-rspec.git'
-
+" }}}
+"
+" Elixir {{{
+Plug 'elixir-editors/vim-elixir'
 " }}}
 
 "Docker
 Plug 'ekalinin/dockerfile.vim'
 
 " Language Servers
-" Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " GIT
 Plug 'git@github.com:tpope/vim-fugitive.git'
