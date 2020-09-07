@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin:$HOME/.cargo/bin
 export EDITOR='nvim'
 
 # load zgen
@@ -8,6 +8,7 @@ source "${HOME}/.zgen/zgen.zsh"
 alias sshbox='bash ~/scripts/remote_servers'
 alias mnt='bash ~/scripts/mount_server' alias vim='nvim'
 alias v='nvim'
+alias vim='nvim'
 alias c='clear'
 alias l='ls'
 alias ll='ls -la'
@@ -40,12 +41,17 @@ bindkey -s '^o' 'lfcd\n'
 zgen load zsh-users/zsh-syntax-highlighting
 zgen load romkatv/powerlevel10k powerlevel10k
 
-# RVM 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# RVM 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
