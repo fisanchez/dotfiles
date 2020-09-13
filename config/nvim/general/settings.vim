@@ -34,16 +34,11 @@ function! LinterStatus() abort
         \)
 endfunction
 
-set statusline=
-set statusline+=%m
-set statusline+=\ %f
-set statusline+=%=
-set statusline+=\ %{LinterStatus()}
-
 syntax enable                           " Enables syntax highlighing
 set ignorecase                          " Ignores case when searching
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Display long lines as just one line
+set textwidth=80                        " Setting maximum width for files
+set wrap                                " Breaks up long lines in multiple
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
@@ -71,24 +66,19 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
+set formatoptions=tcqrn1                " no idea
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set splitbelow                          " Make splitting more natural than the default
 set splitright
 " set autochdir                           " Your working directory will always be the same as your working directory
 
 "Theme
-set t_Co=256                             " Support 256 colors
-set background=dark                     " tell vim what the background color looks like
+ set t_Co=256                              " Support 256 colors
+" set t_Co=16                              " Support 16 bit color
+set background=dark                        " tell vim what the background color looks like
 syntax enable
 colorscheme skyfall
 " [buffer number] followed by filename:
-set statusline=[%n]\ %t
-" for Syntastic messages:
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-" show line#:column# on the right hand side
-set statusline+=%=%l:%c
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
