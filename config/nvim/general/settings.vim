@@ -77,7 +77,14 @@ set splitright
 " set t_Co=16                              " Support 16 bit color
 set background=dark                        " tell vim what the background color looks like
 syntax enable
-colorscheme skyfall
+
+" colorscheme skyfall
+" packadd! dracula
+
+"colorscheme dracula
+colorscheme nord
+
+
 " [buffer number] followed by filename:
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
