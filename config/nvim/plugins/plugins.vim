@@ -21,6 +21,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jparise/vim-graphql'
 
 Plug 'flrnprz/candid.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'rishikanthc/skyfall-vim'
 
 " Fuzzy Find
@@ -62,7 +63,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " UI Plugins
 
 " Vim Icons
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
+
+" Themes
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Ruby{{{
 Plug 'https://github.com/thoughtbot/vim-rspec.git'
@@ -85,7 +89,7 @@ Plug 'git@github.com:tpope/vim-fugitive.git'
 Plug 'git@github.com:pseewald/vim-anyfold.git'
 
 " HTML
-" Plug "https://github.com/mattn/emmet-vim.git"
+Plug 'mattn/emmet-vim'
 
 " Note taking
 Plug 'vimwiki/vimwiki'

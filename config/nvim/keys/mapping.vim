@@ -38,3 +38,11 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" Running current ruby code
+map <Leader>rr :! ruby %<CR>
+map <Leader>rn :! node %<CR>
+
+" EMMETT CONFIG
+"
+" redefine trigger key
+let g:user_emmet_leader_key=','
