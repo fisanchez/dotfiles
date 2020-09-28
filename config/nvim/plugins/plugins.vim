@@ -11,6 +11,9 @@ endif
 
 "Window management
 
+" MD Paste
+Plug 'https://github.com/ferrine/md-img-paste.vim.git'
+
 "General Programming Plugin
 Plug 'https://github.com/tpope/vim-commentary.git'
 
