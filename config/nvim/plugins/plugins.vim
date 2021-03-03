@@ -9,7 +9,8 @@ if has('nvim')
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-"Window management
+"Documentation Generator
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " MD Paste
 Plug 'https://github.com/ferrine/md-img-paste.vim.git'
@@ -23,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'jparise/vim-graphql'
 
+" Themes
 Plug 'flrnprz/candid.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'rishikanthc/skyfall-vim'
@@ -84,6 +86,10 @@ Plug 'ekalinin/dockerfile.vim'
 
 " Language Servers
 Plug 'dense-analysis/ale'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 " GIT
 Plug 'git@github.com:tpope/vim-fugitive.git'
