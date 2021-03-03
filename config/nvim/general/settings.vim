@@ -13,7 +13,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 let g:NERDTreeDirArrowExpandable = "\u00a0"
 let g:NERDTreeDirArrowCollapsible = "\u00a0"
 
-
+let g:python3_host_prog = "/usr/local/bin/python3"
 
 " MD IMAGE
 "
@@ -26,7 +26,6 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 let g:ale_linters = {
   \   'ruby': ['rubocop'],
   \   'python': ['flake8', 'pylint'],
-  \   'javascript': ['eslint'],
   \}
 let g:ale_fix_on_save = 1
 
