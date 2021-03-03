@@ -68,16 +68,8 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -157,36 +149,18 @@ let g:coc_global_extensions = [
   \ 'coc-vetur',
   \ 'coc-tsserver',
   \ 'coc-solargraph',
-  \ 'coc-eslint',
   \ 'coc-highlight',
   \ 'coc-pairs',
   \ 'coc-snippets',
   \ 'coc-prettier',
   \ 'coc-json',
-  \ 'coc-css'
+  \ 'coc-css',
   \ ]
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
-
-nnoremap <silent> K :call CocAction('doHover')<CR>
-
-" I prefer a more automatic behavior where when cursoring over a word, 
-" I see either the diagnostic if it exists, otherwise the documentation. 
-" -- Start --
-
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#util#has_float() == 0)
-    silent call CocActionAsync('doHover')
-  endif
-endfunction
-
-function! s:show_hover_doc()
-  call timer_start(500, 'ShowDocIfNoDiagnostic')
-endfunction
-
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
 
 " -- End --
