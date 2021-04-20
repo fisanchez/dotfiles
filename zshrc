@@ -1,22 +1,18 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin:$HOME/.cargo/bin
 export EDITOR='nvim'
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
-# Aliases
-alias sshbox='bash ~/scripts/remote_servers'
-alias mnt='bash ~/scripts/mount_server' alias vim='nvim'
-alias v='nvim'
-alias vim='nvim'
-alias c='clear'
-alias l='ls'
-alias ll='ls -la'
-alias md='cd ~/.dotfiles'
-alias gh='cd ~/github'
-alias g='git'
-alias ..='cd ..'
-alias tx='tmuxinator'
+# Sourcing aliases
+source "${HOME}/.env_config/aliases"
 
 # Basic auto/tab complete:
 autoload -U compinit
