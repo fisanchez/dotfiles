@@ -1,5 +1,8 @@
-alias sshbox='bash ~/scripts/remote_servers'
-alias mnt='bash ~/scripts/mount_server' alias vim='nvim'
+# shellcheck shell=bash
+
+# alias sshbox='bash ~/scripts/remote_servers'
+alias mnt='bash ~/scripts/mount_server'
+alias vim='nvim'
 alias v='nvim'
 alias vim='nvim'
 alias c='clear'
@@ -15,9 +18,9 @@ alias tx='tmuxinator'
 ## taken from Jeff Surrett
 #
 
-alias rbm "git co master; git pull --rebase; git co -; git rebase master"
-alias vstart "bundle exec foreman start"
-alias reseta "bin/rails assets:clobber; rm -rf node_modules; rm -rf tmp/cache; yarn"
+alias rbm="git co master; git pull --rebase; git co -; git rebase master"
+alias vstart="bundle exec foreman start"
+alias reseta="bin/rails assets:clobber; rm -rf node_modules; rm -rf tmp/cache; yarn"
 
 # -- Kubernetes --
 alias k='kubectl'
