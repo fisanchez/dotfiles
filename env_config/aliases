@@ -13,37 +13,3 @@ alias gh='cd ~/github'
 alias g='git'
 alias ..='cd ..'
 alias tx='tmuxinator'
-
-#
-## taken from Jeff Surrett
-#
-
-alias rbm="git co master; git pull --rebase; git co -; git rebase master"
-alias vstart="bundle exec foreman start"
-alias reseta="bin/rails assets:clobber; rm -rf node_modules; rm -rf tmp/cache; yarn"
-
-# -- Kubernetes --
-alias k='kubectl'
-alias k_gp='k get pods'
-alias k_use='k config use-context'
-
-alias k_use_p_bg='k_use gke_vst-main-prod_us-east1_prodbg1-use1'
-alias k_use_p='k_use gke_vst-main-prod_us-east1_prod1-use1'
-
-alias k_use_np='k_use gke_vst-main-nonprod_us-east1_nonprod3-use1'
-alias k_use_np_bg='k_use gke_vst-main-nonprod_us-east1_nonprodbg2-use1'
-
-alias kpp='k_use_p; k_gp | grep stargate' # List the production pods
-alias kpbgp='k_use_p_bg; k_gp | grep stargate' # List the production background pods
-alias knpp='k_use_np; k_gp | grep stargate' # List the non-production pods
-alias knpbgp='k_use_np_bg; k_gp | grep stargate' # # List the non-production background pods
-alias klog='k log -f'
-alias kpshell='kbash (kpbgp | grep "^stargate-prod-clockwork[^ ]*" -o)'
-alias kdshell='kbash (knpp | grep "^stargate-dev-clockwork[^ ]*" -o)'
-alias kishell='kbash (knpp | grep "^stargate-int-clockwork[^ ]*" -o)'
-alias ksshell='kbash (knpp | grep "^stargate-staging-clockwork[^ ]*" -o)'
-
-alias klog='k log -f'
-
-alias ke='k exec -it'
-alias kcons="k config get-contexts"
