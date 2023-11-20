@@ -11,6 +11,8 @@ alias ll='ls -la'
 alias md='cd ~/.dotfiles'
 alias gh='cd ~/github'
 alias g='git'
+alias gco='git checkout'
+alias gcom='git checkout main'
 alias ..='cd ..'
 alias tx='tmuxinator'
 
