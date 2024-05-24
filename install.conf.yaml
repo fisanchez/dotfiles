@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zshrc
+
+- shell:
+  - chsh -s $(which zsh)
+  - [chsh -s $(which zsh), Making zsh the default shell]
+
