@@ -1,3 +1,2 @@
 # Run dotfile bootstrap
-./dotfile_install
-
+./dotbot_install
